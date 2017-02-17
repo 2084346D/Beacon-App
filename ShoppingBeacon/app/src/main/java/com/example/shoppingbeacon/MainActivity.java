@@ -14,15 +14,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public final static String EXTRA_MESSAGE = "com.example.shoppingbeacon.MESSAGE";
-    /** Called when the user clicks the Send button */
-    public void sendMessage(View view) {
+    /** Called when the user clicks the view list button */
+    public void viewListPage(View view) {
         Intent intent = new Intent(this, AddActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
-
     }
 
+    public void viewManageListPage(View view){
+        Intent intent = new Intent(this, ManageActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewLocation(View view){
+        Intent intent = new Intent(this, LocationsActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewRecipe(View view){
+        Intent intent = new Intent(this, RecipeActivity.class);
+        startActivity(intent);
+    }
 }
