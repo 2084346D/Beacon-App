@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:baselineAligned="false">
+
+    <EditText
+        android:layout_width="320dp"
+        android:inputType="textPersonName"
+        android:text="Add item to List"
+        android:ems="10"
+        android:background="#FFFFFF"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText" />
+
+    <ImageButton
+        android:layout_height="38dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/imageButton"
+        android:elevation="0dp"
+        android:layout_width="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="3dp"/>
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view_list"
-        android:onClick="viewListPage" />
+        android:onClick="viewListPage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/manage_list"
-        android:onClick="viewManageListPage" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/view_location"
-        android:onClick="viewLocation" />
+        android:onClick="viewManageListPage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view_recipe"
-        android:onClick="viewRecipe" />
-</LinearLayout>
+        android:onClick="viewRecipe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_location"
+        android:onClick="viewLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp" />
+
+</RelativeLayout>
